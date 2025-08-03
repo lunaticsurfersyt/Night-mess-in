@@ -3,6 +3,20 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+// Make sure to include this CSS file
+
+const TronButton = () => {
+  return (
+    <button className="relative group px-6 py-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-lg shadow-[0_0_15px_rgba(0,255,255,0.6)] hover:shadow-[0_0_25px_rgba(255,0,0,1)] hover:-translate-y-1 transition-all duration-300 border-2 border-red-600 fire-border">
+      <span className="text-[20px] font-mono font-extrabold text-black drop-shadow-sm pixel-text">
+        Order Now →
+      </span>
+    </button>
+  );
+};
+
+export default TronButton;
+
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
